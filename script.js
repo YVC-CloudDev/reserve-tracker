@@ -6,6 +6,7 @@ window.onload = function () {
 };
 
 async function addDay() {
+    alert("גרסה חדשה");
 
     const date = document.getElementById("date").value;
     const unit = document.getElementById("unit").value;
