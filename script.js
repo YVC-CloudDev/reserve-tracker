@@ -37,24 +37,26 @@ async function addDay() {
     totalDays += Number(days);
 
     updateTotal();
-await fetch(
-    "https://0w8ortde9e.execute-api.us-east-1.amazonaws.com/activity",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            date,
-            unit,
-            activity,
-            days
-        })
-    }
-););
+
+    await fetch(
+        "https://0w8ortde9e.execute-api.us-east-1.amazonaws.com/activity",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                date,
+                unit,
+                activity,
+                days
+            })
+        }
+    );
 
     document.getElementById("date").value = "";
     document.getElementById("unit").value = "";
+    document.getElementById("activity").value = "";
     document.getElementById("days").value = "";
 }
 
@@ -83,6 +85,7 @@ function updateTotal() {
     document.getElementById("totalDays").innerText =
         "סה\"כ ימי מילואים: " + totalDays;
 }
+
 function deleteRow(button, days) {
 
     button.parentElement.parentElement.remove();
