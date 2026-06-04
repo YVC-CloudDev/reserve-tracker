@@ -2,21 +2,6 @@ let totalDays = 0;
 
 window.onload = function () {
 
-    const savedData =
-        JSON.parse(localStorage.getItem("reserveData")) || [];
-
-    savedData.forEach(item => {
-
-        addRow(
-            item.date,
-            item.unit,
-            item.activity,
-            item.days
-        );
-
-        totalDays += Number(item.days);
-    });
-
     updateTotal();
 };
 
@@ -26,13 +11,6 @@ async function addDay() {
     const unit = document.getElementById("unit").value;
     const activity = document.getElementById("activity").value;
     const days = document.getElementById("days").value;
-
-    console.log({
-        date,
-        unit,
-        activity,
-        days
-    });
 
     if (!date || !unit || !days) {
         alert("יש למלא את כל השדות");
@@ -45,21 +23,34 @@ async function addDay() {
 
     updateTotal();
 
-    await fetch(
-        "https://0w8ortde9e.execute-api.us-east-1.amazonaws.com/activity",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                date,
-                unit,
-                activity,
-                days
-            })
-        }
-    );
+    alert("מגיע ל-fetch");
+
+    try {
+
+        const response = await fetch(
+            "https://0w8ortde9e.execute-api.us-east-1.amazonaws.com/activity",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    date,
+                    unit,
+                    activity,
+                    days
+                })
+            }
+        );
+
+        const data = await response.text();
+
+        alert("תשובת שרת: " + data);
+
+    } catch (error) {
+
+        alert("שגיאה: " + error.message);
+    }
 
     document.getElementById("date").value = "";
     document.getElementById("unit").value = "";
