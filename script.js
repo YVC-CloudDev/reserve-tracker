@@ -102,6 +102,7 @@ async function loadActivities() {
         );
 
         const data = await response.json();
+         alert("נמצאו " + data.length + " רשומות");
 
         document.getElementById("tableBody").innerHTML = "";
 
