@@ -27,6 +27,13 @@ async function addDay() {
     const activity = document.getElementById("activity").value;
     const days = document.getElementById("days").value;
 
+    console.log({
+        date,
+        unit,
+        activity,
+        days
+    });
+
     if (!date || !unit || !days) {
         alert("יש למלא את כל השדות");
         return;
@@ -83,7 +90,7 @@ function addRow(date, unit, activity, days) {
 function updateTotal() {
 
     document.getElementById("totalDays").innerText =
-        "סה\"כ ימי מילואים: " + totalDays;
+        'סה"כ ימי מילואים: ' + totalDays;
 }
 
 function deleteRow(button, days) {
