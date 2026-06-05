@@ -54,6 +54,7 @@ async function addDay() {
     const unit = document.getElementById("unit").value;
     const activity = document.getElementById("activity").value;
     const days = document.getElementById("days").value;
+    const email = localStorage.getItem("email");
 
     if (!date || !unit || !days) {
         alert("יש למלא את כל השדות");
@@ -70,6 +71,7 @@ async function addDay() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
+                    email,
                     date,
                     unit,
                     activity,
