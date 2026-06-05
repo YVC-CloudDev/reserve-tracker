@@ -1,3 +1,4 @@
+```css
 body {
     font-family: 'Segoe UI', sans-serif;
     direction: rtl;
@@ -15,10 +16,22 @@ body {
     padding: 30px;
 }
 
+/* ========================= */
+/* LOGIN */
+/* ========================= */
+
 .logo img {
-    width: 400px;
+
+    width: 140px;
+
     height: auto;
+
     margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 10px 25px rgba(0,0,0,0.2)
+        );
 }
 
 #loginBox {
@@ -69,6 +82,10 @@ body {
     margin-bottom: 25px;
 }
 
+/* ========================= */
+/* APP */
+/* ========================= */
+
 #app {
 
     background:
@@ -85,6 +102,101 @@ body {
 
     transition: .5s;
 }
+
+.blur-app {
+
+    filter: blur(10px);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.header {
+
+    position: relative;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+
+    background: rgba(255,255,255,0.25);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+}
+
+.header-center {
+
+    text-align: center;
+}
+
+.header-center h1 {
+
+    margin: 0;
+
+    color: #4b5f25;
+
+    font-weight: 800;
+}
+
+.header-center h3 {
+
+    margin-top: 15px;
+
+    color: #556b2f;
+
+    font-size: 2rem;
+
+    font-weight: bold;
+}
+
+.header-right {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 25px;
+}
+
+.header-right img {
+
+    width: 140px;
+
+    height: auto;
+
+    filter:
+        drop-shadow(
+            0 5px 15px rgba(0,0,0,0.15)
+        );
+}
+
+.logout-btn {
+
+    margin-top: 15px;
+
+    padding: 12px 30px;
+
+    background: #556b2f;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+/* ========================= */
+/* TITLES */
+/* ========================= */
 
 h1 {
 
@@ -108,6 +220,10 @@ h3 {
     font-size: 2rem;
     font-weight: bold;
 }
+
+/* ========================= */
+/* FORM */
+/* ========================= */
 
 .form-container {
 
@@ -150,6 +266,10 @@ select:focus {
         0 0 10px rgba(107,142,35,0.3);
 }
 
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
 button {
 
     background: #556b2f;
@@ -178,6 +298,10 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* ========================= */
+/* TOTAL DAYS */
+/* ========================= */
+
 #totalDays {
 
     background: white;
@@ -199,6 +323,10 @@ button:hover {
     box-shadow:
         0 5px 25px rgba(0,0,0,0.08);
 }
+
+/* ========================= */
+/* TABLE */
+/* ========================= */
 
 table {
 
@@ -237,6 +365,10 @@ tr:hover {
     background: #f7f9f4;
 }
 
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
 @media (max-width: 768px) {
 
     #loginBox {
@@ -263,63 +395,10 @@ tr:hover {
 
         width: 90%;
     }
+
+    .header-right img {
+
+        width: 90px;
+    }
 }
-.blur-app {
-
-    filter: blur(10px);
-
-    opacity: 0.45;
-
-    pointer-events: none;
-}
-.header {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 30px;
-
-    padding: 20px;
-
-    background: rgba(255,255,255,0.25);
-
-    backdrop-filter: blur(10px);
-
-    border-radius: 20px;
-}
-
-.header-right img {
-
-    width: 90px;
-
-    height: auto;
-}
-
-.header-center {
-
-    flex: 1;
-
-    text-align: center;
-}
-
-.header-center h1 {
-
-    margin: 0;
-
-    color: #3f5120;
-}
-
-.header-center h3 {
-
-    margin-top: 10px;
-
-    color: #4b5320;
-}
-
-.header-left {
-
-    width: 120px;
-}
+```
