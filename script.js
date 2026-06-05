@@ -174,3 +174,9 @@ async function deleteRow(soldierId) {
         alert("שגיאה במחיקה");
     }
 }
+function logout() {
+
+    localStorage.removeItem("email");
+
+    location.reload();
+}
