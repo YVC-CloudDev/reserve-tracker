@@ -263,3 +263,11 @@ tr:hover {
         width: 90%;
     }
 }
+.blur-app {
+
+    filter: blur(10px);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
