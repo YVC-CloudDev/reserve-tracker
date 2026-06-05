@@ -24,14 +24,21 @@ function showApp() {
         localStorage.getItem("email");
 
     if (email) {
+        document
+         .getElementById("app")
+         .classList.remove("blur-app");
 
         document.getElementById(
             "loginBox"
         ).style.display = "none";
 
-        document.getElementById(
-            "app"
-        ).style.display = "block";
+       document.getElementById(
+             "app"
+              ).style.display = "block";
+
+       document.getElementById(
+             "loginBox"
+       ).style.display = "none";
 
         document.getElementById(
             "userEmail"
@@ -45,7 +52,12 @@ function showApp() {
 let totalDays = 0;
 
 window.onload = function () {
-   showApp();
+
+    document
+        .getElementById("app")
+        .classList.add("blur-app");
+
+    showApp();
 };
 
 async function addDay() {
