@@ -176,7 +176,7 @@ updateTotal();
 function updateTotal() {
 
     document.getElementById("totalDays").innerText =
-        'סה"כ ימי מילואים: ' + totalDays;
+         totalDays;
 }
 
 async function deleteRow(soldierId) {
