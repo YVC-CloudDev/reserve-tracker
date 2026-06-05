@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="he">
 
@@ -7,33 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>מערכת מעקב ימי מילואים</title>
+    <title>Reserve Tracker</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+    <!-- LOGIN -->
+
     <div id="loginBox">
 
-        <div class="logo">
-            <img src="logo.png" alt="Reserve Tracker">
-        </div>
+        <img
+            src="logo.png"
+            class="login-logo"
+            alt="Reserve Tracker">
 
         <h1>RESERVE TRACKER</h1>
 
-        <h3>
-            ברוכים הבאים למערכת ניהול ימי מילואים
-        </h3>
+        <p>
+            מערכת ניהול ומעקב ימי מילואים
+        </p>
 
         <input
             type="email"
             id="emailInput"
             placeholder="הכנס כתובת מייל">
-
-        <br>
 
         <button onclick="login()">
             כניסה למערכת
@@ -41,31 +42,81 @@
 
     </div>
 
+    <!-- APP -->
+
     <div id="app">
 
-        <div class="header">
+        <!-- HEADER -->
 
-            <div class="header-right">
+        <header class="main-header">
+
+            <div class="header-logo">
                 <img src="logo.png" alt="Reserve Tracker">
             </div>
 
-            <div class="header-center">
+            <div class="header-title">
 
-                <h1>מערכת מעקב ימי מילואים</h1>
+                <h1>
+                    מערכת מעקב ימי מילואים
+                </h1>
 
                 <h3 id="userEmail"></h3>
 
-                <button class="logout-btn" onclick="logout()">
+                <button
+                    class="logout-btn"
+                    onclick="logout()">
+
                     התנתק
+
                 </button>
 
             </div>
 
-        </div>
+        </header>
 
-        <div class="form-container">
+        <!-- DASHBOARD -->
 
-            <input type="date" id="date">
+        <section class="stats-container">
+
+            <div class="stat-card">
+
+                <h4>סה"כ ימי מילואים</h4>
+
+                <span id="totalDays">
+                    0
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>מספר פעילויות</h4>
+
+                <span id="activitiesCount">
+                    0
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>יחידות שונות</h4>
+
+                <span id="unitsCount">
+                    0
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- FORM -->
+
+        <section class="form-container">
+
+            <input
+                type="date"
+                id="date">
 
             <input
                 type="text"
@@ -73,10 +124,12 @@
                 placeholder="יחידה">
 
             <select id="activity">
+
                 <option>אימון</option>
                 <option>מבצעי</option>
                 <option>חירום</option>
                 <option>אחר</option>
+
             </select>
 
             <input
@@ -85,38 +138,44 @@
                 placeholder="מספר ימים">
 
             <button onclick="addDay()">
+
                 הוסף פעילות
+
             </button>
 
-        </div>
+        </section>
 
-        <h2 id="totalDays">
-            סה"כ ימי מילואים: 0
-        </h2>
+        <!-- TABLE -->
 
-        <h2>
-            רשימת פעילויות
-        </h2>
+        <section class="table-section">
 
-        <table>
+            <h2>
+                רשימת פעילויות
+            </h2>
 
-            <thead>
+            <table>
 
-                <tr>
-                    <th>תאריך</th>
-                    <th>יחידה</th>
-                    <th>פעילות</th>
-                    <th>ימים</th>
-                    <th>פעולות</th>
-                </tr>
+                <thead>
 
-            </thead>
+                    <tr>
 
-            <tbody id="tableBody">
+                        <th>תאריך</th>
+                        <th>יחידה</th>
+                        <th>פעילות</th>
+                        <th>ימים</th>
+                        <th>פעולות</th>
 
-            </tbody>
+                    </tr>
 
-        </table>
+                </thead>
+
+                <tbody id="tableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
 
     </div>
 
@@ -125,4 +184,3 @@
 </body>
 
 </html>
-```
