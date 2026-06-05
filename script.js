@@ -164,7 +164,7 @@ document.getElementById("unitsCount").innerText =
 
 updateTotal();
 
-        updateTotal();
+        
 
     } catch (error) {
 
