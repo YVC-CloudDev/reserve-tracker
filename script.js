@@ -1,7 +1,51 @@
+function login() {
+
+    const email =
+        document.getElementById("emailInput").value;
+
+    if (!email) {
+
+        alert("יש להזין מייל");
+
+        return;
+    }
+
+    localStorage.setItem(
+        "email",
+        email
+    );
+
+    showApp();
+}
+
+function showApp() {
+
+    const email =
+        localStorage.getItem("email");
+
+    if (email) {
+
+        document.getElementById(
+            "loginBox"
+        ).style.display = "none";
+
+        document.getElementById(
+            "app"
+        ).style.display = "block";
+
+        document.getElementById(
+            "userEmail"
+        ).innerText =
+            "שלום " + email;
+
+        loadActivities();
+    }
+}
+
 let totalDays = 0;
 
 window.onload = function () {
-    loadActivities();
+   showApp();
 };
 
 async function addDay() {
