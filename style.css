@@ -22,12 +22,32 @@ h3 {
 }
 
 #loginBox {
-    background: white;
+    background: rgba(255,255,255,0.95);
     max-width: 450px;
     margin: 80px auto;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.15),
+        0 5px 15px rgba(0,0,0,0.08);
+
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 #app {
