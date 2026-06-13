@@ -82,7 +82,7 @@ DynamoDB
 
 > Add screenshot here
 
-![Login Screen](screenshots/login.png)
+![Login Screen](login.png)
 
 ---
 
@@ -90,31 +90,7 @@ DynamoDB
 
 > Add screenshot here
 
-![Dashboard](screenshots/dashboard.png)
-
----
-
-## Activity Management
-
-> Add screenshot here
-
-![Activities](screenshots/activities.png)
-
----
-
-## DynamoDB Records
-
-> Add screenshot here
-
-![DynamoDB](screenshots/dynamodb.png)
-
----
-
-## GitHub Actions Deployment
-
-> Add screenshot here
-
-![GitHub Actions](screenshots/github-actions.png)
+![Dashboard](desh.png)
 
 ---
 
